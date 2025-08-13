@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --bg-dark: #1E293B;
+  --card-bg: #334155;
+  --text-primary: #E2E8F0;
+  --btn-primary: #64748B;
+  --btn-success: #22C55E;
+  --accent-blue: #3B82F6;
 }
 
 @theme inline {
@@ -20,7 +26,7 @@
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(55deg, #0c1056 15%, #12121c 100%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
