@@ -1,0 +1,26 @@
+# Backend
+backend/habit-tracker
+backend/*.exe
+backend/*.test
+backend/*.out
+
+# Frontend dependencies and build
+frontend/node_modules
+frontend/.next
+frontend/out
+frontend/build
+frontend/.env*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
