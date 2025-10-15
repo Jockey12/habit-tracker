@@ -205,6 +205,11 @@
   resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-15.5.5.tgz"
   integrity sha512-tI+sBu+3FmWtqlqD4xKJcj3KJtqbniLombKTE7/UWyyoHmOyAo3aZ7QcEHIOgInXOG1nt0rwh0KGmNbvSB0Djg==
 
+"@next/swc-linux-x64-musl@15.5.5":
+  version "15.5.5"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-15.5.5.tgz"
+  integrity sha512-kDRh+epN/ulroNJLr+toDjN+/JClY5L+OAWjOrrKCI0qcKvTw9GBx7CU/rdA2bgi4WpZN3l0rf/3+b8rduEwrQ==
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.npmjs.org/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz"

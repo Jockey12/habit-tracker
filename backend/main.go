@@ -4,6 +4,7 @@ import (
 	"os"
 	"strings"
 
+	"github.com/jockey12/habit-tracker/database"
 	"github.com/jockey12/habit-tracker/routes"
 
 	"github.com/gin-contrib/cors"
@@ -11,6 +12,9 @@ import (
 )
 
 func main() {
+	// Initialize database
+	database.InitDatabase()
+
 	r := gin.Default()
 	r.Use(gin.Logger())
 	
@@ -23,7 +27,7 @@ func main() {
 	
 	r.Use(cors.New(cors.Config{
 		AllowOrigins:     allowedOrigins,
-		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"},
 		AllowHeaders:     []string{"Origin", "Content-Type", "Accept"},
 		ExposeHeaders:    []string{"Content-Length"},
 		AllowCredentials: false,

@@ -1,0 +1,25 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - GIN_MODE=release
+      - ALLOWED_ORIGINS=http://localhost:3000,http://localhost
+    volumes:
+      - ./backend/data:/root
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8080
+    depends_on:
+      - backend
+    restart: unless-stopped
