@@ -1,7 +1,7 @@
 package main
 
 import (
-	"habit-tracker/routes"
+	"github.com/jockey12/habit-tracker/routes"
 
 	"github.com/gin-gonic/gin"
 )

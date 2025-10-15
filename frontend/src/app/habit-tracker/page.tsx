@@ -4,7 +4,7 @@ export default function Home() {
     <div className="font-sans min-h-screen flex flex-col items-center p-8">
       <header className="w-full flex items-center justify-between mb-4 px-6 py-4 bg-black shadow-md rounded-lg transition">
         {/* <h1 className="text-3xl font-bold text-gray-800"><a href="#">Habit Tracker</a></h1> */}
-        <h1 className="text-3xl font-bold text--stone-50 flex items-center gap-4">
+        <h1 className="text-3xl font-bold text-stone-50 flex items-center gap-4">
           <a href="./home" className="relative inline-block after:content-[''] after:block after:h-0.5 after:bg-current after:w-0 after:transition-all after:duration-300 hover:after:w-full">Home</a>
           <span className="border-l border-gray-300 h-6 mx-2"></span>
           <a href="./habit-tracker" className="relative inline-block after:content-[''] after:block after:h-0.5 after:bg-current after:w-0 after:transition-all after:duration-300 hover:after:w-full">Habit Tracker</a>
@@ -51,7 +51,7 @@ export default function Home() {
         </button>
       </main>
       <footer className="mt-12 text-gray-400 text-sm">
-        &copy; {new Date().getFullYear()} Jockey101. All rights reserved.
+        &copy; {new Date().getFullYear()} Jockey12. All rights reserved.
 
       </footer>
     </div>
