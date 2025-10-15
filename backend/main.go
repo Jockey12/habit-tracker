@@ -12,12 +12,13 @@ func main() {
 	r.Use(gin.Logger())
 	
 	// CORS middleware for production deployment
+	// Note: Configure AllowOrigins with specific domains in production
 	r.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"*"}, // Configure this for production
+		AllowOrigins:     []string{"*"},
 		AllowMethods:     []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
 		AllowHeaders:     []string{"Origin", "Content-Type", "Accept"},
 		ExposeHeaders:    []string{"Content-Length"},
-		AllowCredentials: true,
+		AllowCredentials: false,
 	}))
 	
 	routes.SetupRoutes(r)
