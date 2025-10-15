@@ -80,6 +80,18 @@ go build -o habit-tracker
 ./habit-tracker
 ```
 
+#### Environment Variables
+
+- `GIN_MODE=release` - Set to release mode for production
+- `ALLOWED_ORIGINS` - Comma-separated list of allowed origins for CORS (e.g., `https://yourdomain.com,https://www.yourdomain.com`)
+
+Example:
+```bash
+export GIN_MODE=release
+export ALLOWED_ORIGINS=https://yourdomain.com
+./habit-tracker
+```
+
 ## Deployment
 
 ### Frontend (Vercel)
