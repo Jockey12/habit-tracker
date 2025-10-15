@@ -3,6 +3,7 @@ backend/habit-tracker
 backend/*.exe
 backend/*.test
 backend/*.out
+backend/*.db
 
 # Frontend dependencies and build
 frontend/node_modules

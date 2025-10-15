@@ -2,6 +2,7 @@ package routes
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/jockey12/habit-tracker/handlers"
 )
 
 func SetupRoutes(r *gin.Engine) {
@@ -16,14 +17,15 @@ func SetupRoutes(r *gin.Engine) {
 			})
 		})
 
-		// Habits endpoints placeholder
+		// Habits endpoints
 		habits := api.Group("/habits")
 		{
-			habits.GET("", func(c *gin.Context) {
-				c.JSON(200, gin.H{
-					"habits": []string{},
-				})
-			})
+			habits.GET("", handlers.GetHabits)
+			habits.GET("/:id", handlers.GetHabit)
+			habits.POST("", handlers.CreateHabit)
+			habits.PUT("/:id", handlers.UpdateHabit)
+			habits.DELETE("/:id", handlers.DeleteHabit)
+			habits.PATCH("/:id/toggle", handlers.ToggleHabitCompletion)
 		}
 	}
 }
